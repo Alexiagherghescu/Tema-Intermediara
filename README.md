@@ -11,3 +11,8 @@ Buton 3- resetul, toate ledurile stinse.
 Avem nevoie de clock pentru a sincroniza sistemul de numarare la fronturile pozitive ale ceasului.
 Avem nevoie de un circuit de Debounce: -Am nevoie de debounce pentru fiecare buton?(De vazut ECE3300 55-61)
                                        -Cum ar trebui scris modulul de debounce?(De vazut ECE4305: M3)
+                                       
+Ce se intampla cand ajung la nr maxim care poate fi reprezentat pe 16b si apas butonul 1? - as vrea ca incrementarea sa inceapa iar de la 0
+Dar cand sunt la 0 si apas butonul 2? - as vrea ca decrementarea sa inceapa de la nr maxim care poate fi reprezentat pe 16b.
+Am nevoie de o secventa de cod separata care impune aceste constrangeri? - voi vedea in testbench, nu cred ca am nevoie de o alta structura
+Se pot apasa simultan 2 butoane? Care ar avea prioritate?
