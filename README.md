@@ -23,4 +23,7 @@ Avem nevoie de un circuit de Debounce:
 Ce se intampla cand ajung la nr maxim care poate fi reprezentat pe 16b si apas butonul 1? - as vrea ca incrementarea sa inceapa iar de la 0  
 Dar cand sunt la 0 si apas butonul 2? - as vrea ca decrementarea sa inceapa de la nr maxim care poate fi reprezentat pe 16b.  
 Am nevoie de o secventa de cod separata care impune aceste constrangeri? - voi vedea in testbench, nu cred ca am nevoie de o alta structura  
-Se pot apasa simultan 2 butoane? Care ar avea prioritate?  
+
+Se pot apasa simultan 2 butoane? Care ar avea prioritate?   
+- vreau ca atunci cand sunt apasate amandoua simultan sa nu se intample nimic, deoarece ar fi o eroare, counterul afiseaza valoarea anterioara apasarii celor 2 butoane simultan pana la primirea unei comenzi valide.  
+
