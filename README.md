@@ -35,5 +35,8 @@ Raspuns la intrebari Debouncer
 Am verificat prin testbench functionarea butoanelor si a debouncerului. Am intampinat o problema cu initializarea semnalelor. Semnalul led nu era initializat cu nicio valoare.  
 Am realizat ca era o problema de metastabilitate din cauza debouncerului , intrucat semnalele din acesta nu au fost initializate cu nicio valoare, iar counterul nu stie de la ce valoare incepe si numara .  De asemenea am inceput testbench ul prin a da un reset sistemului.
 Voi verifica daca din 0 decrementarea se va face la 2^n-1 si daca incrementarea din 2^n-1 se transforma in 0.(cand counterul isi atinge limitele desemnate de nr de biti).
+Da, se verifica comportamentul dorit. De la 0 decrementarea duce la ffff.
+
+
 
 
