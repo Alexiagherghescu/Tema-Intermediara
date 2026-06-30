@@ -25,5 +25,15 @@ Dar cand sunt la 0 si apas butonul 2? - as vrea ca decrementarea sa inceapa de l
 Am nevoie de o secventa de cod separata care impune aceste constrangeri? - voi vedea in testbench, nu cred ca am nevoie de o alta structura  
 
 Se pot apasa simultan 2 butoane? Care ar avea prioritate?   
-- vreau ca atunci cand sunt apasate amandoua simultan sa nu se intample nimic, deoarece ar fi o eroare, counterul afiseaza valoarea anterioara apasarii celor 2 butoane simultan pana la primirea unei comenzi valide.  
+- vreau ca atunci cand sunt apasate amandoua simultan sa nu se intample nimic, deoarece ar fi o eroare, counterul afiseaza valoarea anterioara apasarii celor 2 butoane simultan pana la primirea unei comenzi valide.
+
+  
+LUNI
+Raspuns la intrebari Debouncer  
+-da, am nevoie de un debouncer pentru fiecare buton,    
+-am scris modulul de debouncer luand in considerare detectorul de front si detectorul de nivel .
+Am verificat prin testbench functionarea butoanelor si a debouncerului. Am intampinat o problema cu initializarea semnalelor. Semnalul led nu se aprindea.  
+Am realizat ca era o problema de metastabilitate din cauza debouncerului , intrucat semnalele din acesta nu au fost initializate cu nicio valoare, iar counterul nu stie de la ce valoare incepe si numara .  
+Voi verifica daca din 0 decrementarea se va face la 2^n-1 si daca incrementarea din 2^n-1 se transforma in 0.(cand counterul isi atinge limitele desemnate de nr de biti).
+
 
