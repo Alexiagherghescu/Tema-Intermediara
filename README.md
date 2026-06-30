@@ -31,9 +31,9 @@ Se pot apasa simultan 2 butoane? Care ar avea prioritate?
 LUNI
 Raspuns la intrebari Debouncer  
 -da, am nevoie de un debouncer pentru fiecare buton,    
--am scris modulul de debouncer luand in considerare detectorul de front si detectorul de nivel .
-Am verificat prin testbench functionarea butoanelor si a debouncerului. Am intampinat o problema cu initializarea semnalelor. Semnalul led nu se aprindea.  
-Am realizat ca era o problema de metastabilitate din cauza debouncerului , intrucat semnalele din acesta nu au fost initializate cu nicio valoare, iar counterul nu stie de la ce valoare incepe si numara .  
+-am scris modulul de debouncer luand in considerare detectorul de front si detectorul de nivel, puse in evidenta intr-un singur modul .
+Am verificat prin testbench functionarea butoanelor si a debouncerului. Am intampinat o problema cu initializarea semnalelor. Semnalul led nu era initializat cu nicio valoare.  
+Am realizat ca era o problema de metastabilitate din cauza debouncerului , intrucat semnalele din acesta nu au fost initializate cu nicio valoare, iar counterul nu stie de la ce valoare incepe si numara .  De asemenea am inceput testbench ul prin a da un reset sistemului.
 Voi verifica daca din 0 decrementarea se va face la 2^n-1 si daca incrementarea din 2^n-1 se transforma in 0.(cand counterul isi atinge limitele desemnate de nr de biti).
 
 
